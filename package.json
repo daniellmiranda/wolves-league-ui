@@ -1,0 +1,12 @@
+{
+  "name": "wolves-league-design-system",
+  "private": true,
+  "packageManager": "pnpm@8.6.11",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.12"
+  }
+}
