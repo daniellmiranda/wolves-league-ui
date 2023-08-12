@@ -1,0 +1,4 @@
+{
+  "extends": "@wolves-league/ts-config/base.json",
+  "include": ["src"]
+}
