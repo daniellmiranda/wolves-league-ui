@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@wolves-league/react';
-import { Cog6ToothIcon } from '@heroicons/react/24/solid';
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -13,9 +12,8 @@ const meta: Meta<typeof Button> = {
     children: { control: 'text', defaultValue: 'Button Text' },
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'highlight', 'iconOnly'],
+      options: ['primary', 'secondary', 'tertiary'],
     },
-    theme: { control: 'select', options: ['light', 'dark'] },
     disabled: { control: 'boolean' },
     onClick: { table: { disable: true }, action: 'clicked' },
   },
@@ -28,6 +26,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: 'Button Text',
+    variant: 'primary',
   },
 };
 
@@ -38,16 +37,9 @@ export const Secondary: Story = {
   },
 };
 
-export const Highlight: Story = {
+export const Tertiary: Story = {
   args: {
     children: 'Button Text',
-    variant: 'highlight',
-  },
-};
-
-export const IconOnly: Story = {
-  args: {
-    children: <Cog6ToothIcon style={{ height: '2rem', widows: '2rem' }} />,
-    variant: 'iconOnly',
+    variant: 'tertiary',
   },
 };
