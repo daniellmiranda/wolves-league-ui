@@ -9,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "@heroicons/react": "^2.0.18",
+    "@storybook/addon-a11y": "^7.2.3",
     "@storybook/addon-essentials": "^7.2.1",
     "@storybook/addon-interactions": "^7.2.1",
     "@storybook/addon-links": "^7.2.1",
@@ -28,7 +29,8 @@
     "eslint": "^8.46.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.2.1",
-    "typescript": "^5.1.6"
+    "storybook": "^7.2.3",
+    "typescript": "^5.1.6",
+    "upgrade": "^1.1.0"
   }
 }
