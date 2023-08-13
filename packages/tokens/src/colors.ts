@@ -1,4 +1,5 @@
 export const colors = {
+  transparent: 'transparent',
   white: '#FFF',
   black: '#000',
 
