@@ -2,11 +2,12 @@
   "name": "docs",
   "version": "1.0.0",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint src/**/*.ts* --fix"
   },
-  "license": "MIT",
   "devDependencies": {
     "@heroicons/react": "^2.0.18",
     "@storybook/addon-a11y": "^7.3.1",
@@ -26,7 +27,6 @@
     "@wolves-league/eslint-config": "workspace:*",
     "@wolves-league/react": "workspace:*",
     "@wolves-league/ts-config": "workspace:*",
-    "eslint": "^8.46.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.3.1",

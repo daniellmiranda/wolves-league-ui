@@ -22,7 +22,6 @@
     "@wolves-league/tokens": "workspace:*",
     "@wolves-league/ts-config": "workspace:*",
     "autoprefixer": "^10.4.14",
-    "eslint-plugin-prettier": "^5.0.0",
     "happy-dom": "^10.10.0",
     "postcss": "^8.4.27",
     "react": "^18.2.0",
