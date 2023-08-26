@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
@@ -31,7 +31,7 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.3.2",
     "storybook-addon-tailwind-theme-toggle": "link:../../../storybook-addon-tailwind-theme-toggle",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "upgrade": "^1.1.0"
   }
 }
