@@ -1,11 +1,12 @@
 {
-  "name": "docs",
+  "name": "@wolves-league-ui/docs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
+    "serve": "serve storybook-static",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
@@ -24,13 +25,12 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "@wolves-league/eslint-config": "workspace:*",
-    "@wolves-league/react": "workspace:*",
-    "@wolves-league/ts-config": "workspace:*",
+    "@wolves-league-ui/eslint-config": "workspace:*",
+    "@wolves-league-ui/react": "^1.0.0",
+    "@wolves-league-ui/ts-config": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.3.2",
-    "storybook-addon-tailwind-theme-toggle": "link:../../../storybook-addon-tailwind-theme-toggle",
     "typescript": "^5.2.2",
     "upgrade": "^1.1.0"
   }

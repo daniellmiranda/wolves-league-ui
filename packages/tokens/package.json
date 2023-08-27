@@ -1,5 +1,5 @@
 {
-  "name": "@wolves-league/tokens",
+  "name": "@wolves-league-ui/tokens",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "dist/index.mjs",
@@ -11,8 +11,8 @@
     "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
-    "@wolves-league/eslint-config": "workspace:*",
-    "@wolves-league/ts-config": "workspace:*",
+    "@wolves-league-ui/eslint-config": "workspace:*",
+    "@wolves-league-ui/ts-config": "workspace:*",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   }

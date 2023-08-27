@@ -1,4 +1,4 @@
-import '@wolves-league/react/dist/index.css';
+import '@wolves-league-ui/react/dist/index.css';
 import type { Preview } from '@storybook/react';
 import { themes } from '@storybook/theming';
 

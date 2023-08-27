@@ -6,7 +6,7 @@ import {
   fontWeight,
   lineHeight,
   spacing,
-} from '@wolves-league/tokens';
+} from '@wolves-league-ui/tokens';
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],

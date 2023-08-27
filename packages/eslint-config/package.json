@@ -1,5 +1,5 @@
 {
-  "name": "@wolves-league/eslint-config",
+  "name": "@wolves-league-ui/eslint-config",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",

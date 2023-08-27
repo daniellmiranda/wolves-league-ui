@@ -1,4 +1,4 @@
 {
-  "extends": "@wolves-league/ts-config/react.json",
+  "extends": "@wolves-league-ui/ts-config/react.json",
   "include": ["src"]
 }
