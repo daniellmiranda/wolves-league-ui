@@ -16,4 +16,6 @@ export const colors = {
   wl500: '#ff0000',
   wl700: '#800000',
   wl900: '#400000',
+
+  test: '#fff',
 };
