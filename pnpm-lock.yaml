@@ -80,9 +80,6 @@ importers:
       storybook:
         specifier: ^7.4.0
         version: 7.4.0
-      storybook-addon-tailwind-theme-toggle:
-        specifier: link:../storybook-addon-tailwind-theme-toggle
-        version: link:../storybook-addon-tailwind-theme-toggle
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
