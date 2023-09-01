@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Cog6ToothIcon } from '@heroicons/react/24/solid';
 import { Button } from '@wolves-league-ui/react';
 
 const meta: Meta<typeof Button> = {
@@ -12,10 +13,15 @@ const meta: Meta<typeof Button> = {
     children: { control: 'text', defaultValue: 'Button Text' },
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'tertiary'],
+      options: ['primary', 'secondary', 'highlight', 'link'],
+    },
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg', 'icon'],
     },
     disabled: { control: 'boolean' },
     onClick: { table: { disable: true }, action: 'clicked' },
+    asChild: { control: 'boolean' },
   },
 };
 
@@ -37,9 +43,49 @@ export const Secondary: Story = {
   },
 };
 
-export const Tertiary: Story = {
+export const Highlight: Story = {
   args: {
     children: 'Button Text',
-    variant: 'tertiary',
+    variant: 'highlight',
+  },
+};
+
+export const Link: Story = {
+  args: {
+    children: <a href="javascript:void(0)">Button Text</a>,
+    variant: 'link',
+    asChild: true,
+  },
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
+};
+
+export const TextWithIcon: Story = {
+  args: {
+    children: (
+      <>
+        <Cog6ToothIcon width="24" height="24" /> Button Text
+      </>
+    ),
+  },
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    children: <Cog6ToothIcon width="24" height="24" />,
+    size: 'icon',
+  },
+  argTypes: {
+    children: {
+      control: false,
+    },
   },
 };
