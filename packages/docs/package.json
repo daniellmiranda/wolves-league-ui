@@ -1,6 +1,6 @@
 {
   "name": "@wolves-league-ui/docs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -27,7 +27,7 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@wolves-league-ui/eslint-config": "workspace:*",
-    "@wolves-league-ui/react": "^1.0.0",
+    "@wolves-league-ui/react": "^2.0.0",
     "@wolves-league-ui/ts-config": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

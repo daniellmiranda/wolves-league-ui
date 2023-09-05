@@ -1,19 +1,20 @@
 {
   "name": "@wolves-league-ui/react",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "main": "./dist/index.js",
   "module": "dist/index.mjs",
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react,react-dom",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react,react-dom",
     "lint": "eslint src/**/*.ts* --fix",
     "test": "vitest run src",
     "test:watch": "vitest src"
   },
   "devDependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.0.6",
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.21",
@@ -26,7 +27,7 @@
     "happy-dom": "^10.11.2",
     "postcss": "^8.4.29",
     "react": "^18.2.0",
-    "tailwind-variants": "^0.1.13",
+    "tailwind-variants": "^0.1.14",
     "tailwindcss": "^3.3.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
