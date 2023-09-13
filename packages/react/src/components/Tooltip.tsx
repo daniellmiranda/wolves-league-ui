@@ -8,7 +8,7 @@ interface TooltipProps {
   side?: TooltipRadix.PopperContentProps['side'];
 }
 
-export function Tooltip({ children, content, side }: TooltipProps) {
+export const Tooltip = ({ children, content, side }: TooltipProps) => {
   return (
     <TooltipRadix.Provider delayDuration={0}>
       <TooltipRadix.Root>
@@ -18,13 +18,13 @@ export function Tooltip({ children, content, side }: TooltipProps) {
             sideOffset={5}
             side={side}
             avoidCollisions
-            className="bg-gray900 rounded-md py-2 px-4 text-gray100 data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
+            className="bg-gray900 border border-gray700 shadow-md rounded-md py-2 px-4 text-sm text-gray100 data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
           >
             {content}
-            <TooltipRadix.Arrow />
           </TooltipRadix.Content>
         </TooltipRadix.Portal>
       </TooltipRadix.Root>
     </TooltipRadix.Provider>
   );
-}
+};
+Tooltip.displayName = 'Tooltip';
