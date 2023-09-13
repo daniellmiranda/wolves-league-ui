@@ -43,6 +43,13 @@ export const Secondary: Story = {
   },
 };
 
+export const Tertiary: Story = {
+  args: {
+    children: 'Button Text',
+    variant: 'tertiary',
+  },
+};
+
 export const Highlight: Story = {
   args: {
     children: 'Button Text',
@@ -52,7 +59,7 @@ export const Highlight: Story = {
 
 export const Link: Story = {
   args: {
-    children: <a href="javascript:void(0)">Button Text</a>,
+    children: <a onClick={() => null}>Button Text</a>,
     variant: 'link',
     asChild: true,
   },
