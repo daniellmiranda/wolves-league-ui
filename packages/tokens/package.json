@@ -1,6 +1,6 @@
 {
   "name": "@wolves-league-ui/tokens",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "dist/index.mjs",
   "types": "./dist/index.d.ts",
