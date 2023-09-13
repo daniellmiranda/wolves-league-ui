@@ -1,7 +1,28 @@
 # @wolves-league-ui/react
 
-## 2.0.0
+## 2.1.0
+
+### `Dialog`
+
+  - Adds `Dialog` component
+
 ### `Tooltip`
+
+  - Adds `displayName` prop
+  - Improves styling
+
+### `Button`
+
+  - Adds `tertiary` variant
+  - Improves styling
+
+### Others
+  - Updates packages
+
+## 2.0.0
+
+### `Tooltip`
+
 - Adds `Tooltip` component
 
 ## 1.1.1
