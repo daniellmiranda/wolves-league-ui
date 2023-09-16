@@ -4,13 +4,13 @@ import { Button } from '@wolves-league-ui/react';
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: 'Forms/Button',
+  title: 'Form/Button',
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text', defaultValue: 'Button Text' },
+    children: { control: 'text', defaultValue: 'Label' },
     variant: {
       control: 'select',
       options: ['primary', 'secondary', 'highlight', 'link'],
@@ -19,10 +19,30 @@ const meta: Meta<typeof Button> = {
       control: 'select',
       options: ['sm', 'md', 'lg', 'icon'],
     },
+    full: { control: 'boolean' },
     disabled: { control: 'boolean' },
     onClick: { table: { disable: true }, action: 'clicked' },
     asChild: { control: 'boolean' },
   },
+  decorators: [
+    (Story, context) => {
+      const isStoryContext = context.viewMode === 'story';
+      return (
+        <div
+          style={{
+            width: isStoryContext ? '100wh' : 'initial',
+            height: isStoryContext ? '100vh' : 'initial',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '1.875rem 1.25rem',
+          }}
+        >
+          <Story />
+        </div>
+      );
+    },
+  ],
 };
 
 export default meta;
@@ -31,35 +51,35 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    children: 'Button Text',
+    children: 'Label',
     variant: 'primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    children: 'Button Text',
+    children: 'Label',
     variant: 'secondary',
   },
 };
 
 export const Tertiary: Story = {
   args: {
-    children: 'Button Text',
+    children: 'Label',
     variant: 'tertiary',
   },
 };
 
 export const Highlight: Story = {
   args: {
-    children: 'Button Text',
+    children: 'Label',
     variant: 'highlight',
   },
 };
 
 export const Link: Story = {
   args: {
-    children: <a onClick={() => null}>Button Text</a>,
+    children: <a onClick={() => null}>Label</a>,
     variant: 'link',
     asChild: true,
   },
@@ -74,7 +94,7 @@ export const TextWithIcon: Story = {
   args: {
     children: (
       <>
-        <Cog6ToothIcon width="24" height="24" /> Button Text
+        <Cog6ToothIcon width="24" height="24" /> Label
       </>
     ),
   },
@@ -94,5 +114,13 @@ export const Icon: Story = {
     children: {
       control: false,
     },
+  },
+};
+
+export const Full: Story = {
+  args: {
+    children: 'Label',
+    variant: 'primary',
+    full: true,
   },
 };
