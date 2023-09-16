@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Tooltip>;
 
 export const Default: Story = {
   args: {
-    children: <InformationCircleIcon height="24" width="24" className="dark:text-gray100" />,
+    children: <InformationCircleIcon height="24" width="24" className="text-gray-100" />,
     content: 'Tooltip content',
   },
 };

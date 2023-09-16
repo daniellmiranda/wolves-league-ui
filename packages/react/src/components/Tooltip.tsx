@@ -18,7 +18,7 @@ export const Tooltip = ({ children, content, side }: TooltipProps) => {
             sideOffset={5}
             side={side}
             avoidCollisions
-            className="bg-gray900 border border-gray700 shadow-md rounded-md py-2 px-4 text-sm text-gray100 data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
+            className="bg-gray-900 border border-gray-600 shadow-md rounded-md py-2 px-4 text-sm text-gray-100 data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
           >
             {content}
           </TooltipRadix.Content>
