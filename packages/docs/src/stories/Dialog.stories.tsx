@@ -15,8 +15,8 @@ export default meta;
 type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
-  render: (args) => (
-    <Dialog {...args}>
+  render: () => (
+    <Dialog>
       <Dialog.Trigger asChild>
         <Button>Open Dialog</Button>
       </Dialog.Trigger>
