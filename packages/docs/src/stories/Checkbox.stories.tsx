@@ -8,6 +8,10 @@ const meta: Meta<typeof Checkbox> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    id: { control: 'text' },
+    label: { control: 'text' },
+  },
 };
 
 export default meta;
@@ -15,5 +19,8 @@ export default meta;
 type Story = StoryObj<typeof Checkbox>;
 
 export const Default: Story = {
-  render: () => <Checkbox id="default" label="Accept terms and conditions" />,
+  args: {
+    id: 'checkbox-id',
+    label: 'Accept terms and conditions',
+  },
 };
