@@ -1,11 +1,16 @@
 # @wolves-league-ui/react
 
+## 0.2.0
+
+### Minor Changes
+
+- Creates `Switch` component
+
 ## 0.1.3
 
 ### Patch Changes
 
-- - Updates `Checkbox` style
-  - Improves `Checkbox` story
+- Updates `Checkbox` style
 
 ## 0.1.2
 
