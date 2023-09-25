@@ -71,3 +71,21 @@ Publish the packages to NPM:
 ```bash
 pnpm release
 ```
+## ✅ To-do
+- [x] Button
+- [x] Tooltip
+- [x] Dialog
+- [x] Checkbox
+- [x] Switch
+- [x] Slider
+- [ ] Input
+- [ ] Accordion
+- [ ] Avatar
+- [ ] Autocomplete
+- [ ] Dropdown Menu
+- [ ] Progress
+- [ ] Radio
+- [ ] Scroll Area
+- [ ] Select
+- [ ] Separator
+- [ ] Toast
