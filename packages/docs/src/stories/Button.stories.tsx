@@ -17,8 +17,9 @@ const meta: Meta<typeof Button> = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg', 'icon'],
+      options: ['sm', 'md', 'lg'],
     },
+    icon: { control: 'boolean' },
     full: { control: 'boolean' },
     disabled: { control: 'boolean' },
     onClick: { table: { disable: true }, action: 'clicked' },
@@ -108,7 +109,7 @@ export const TextWithIcon: Story = {
 export const Icon: Story = {
   args: {
     children: <Cog6ToothIcon width="24" height="24" />,
-    size: 'icon',
+    icon: true,
   },
   argTypes: {
     children: {

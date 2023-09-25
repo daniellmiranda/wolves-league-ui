@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef, forwardRef } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
 const button = tv({
-  base: 'inline-flex gap-2 px-4 py-2 rounded-lg transition-all ease-in-out border border-transparent font-medium transform cursor-default active:scale-95 disabled:text-gray-400 disabled:border-dashed disabled:border-gray-400 disabled:bg-transparent disabled:cursor-not-allowed',
+  base: 'inline-flex gap-2 px-4 py-2 rounded-lg transition-all ease-in-out border border-transparent font-medium transform cursor-default active:scale-95 disabled:text-gray-400 disabled:border-dashed disabled:border-gray-400 disabled:bg-transparent disabled:cursor-not-allowed w-fit',
   variants: {
     variant: {
       primary: 'bg-gray-900 text-gray-100 border border-gray-600  hover:bg-gray-600',
@@ -16,12 +16,31 @@ const button = tv({
       sm: 'text-sm',
       md: 'text-md',
       lg: 'text-lg',
-      icon: 'p-2 text-white',
     },
     full: {
       true: 'w-full justify-center',
     },
+    icon: {
+      true: 'text-white',
+    },
   },
+  compoundVariants: [
+    {
+      icon: true,
+      size: 'sm',
+      className: 'p-1',
+    },
+    {
+      icon: true,
+      size: 'md',
+      className: 'p-[0.375rem]',
+    },
+    {
+      icon: true,
+      size: 'lg',
+      className: 'p-2',
+    },
+  ],
   defaultVariants: {
     variant: 'primary',
     size: 'md',
@@ -33,14 +52,13 @@ interface ButtonProps extends ComponentPropsWithoutRef<'button'>, VariantProps<t
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, variant, size, full, asChild = false, ...props }, ref) => {
+  ({ children, variant, size, full, icon, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
-      <Comp className={button({ variant, size, full })} ref={ref} {...props}>
+      <Comp className={button({ variant, size, full, icon })} ref={ref} {...props}>
         {children}
       </Comp>
     );
   },
 );
-
 Button.displayName = 'Button';
