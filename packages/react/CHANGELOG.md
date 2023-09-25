@@ -1,5 +1,13 @@
 # @wolves-league-ui/react
 
+## 0.3.0
+
+### Minor Changes
+
+- Creates `Slider` component
+- Changes `Button` `icon` prop to be a `variant` instead of a `size`
+- Updates all dependencies
+
 ## 0.2.0
 
 ### Minor Changes

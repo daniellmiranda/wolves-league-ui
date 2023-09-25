@@ -1,5 +1,13 @@
 # @wolves-league-ui/docs
 
+## 0.3.0
+
+### Minor Changes
+
+- Creates `Slider` component story
+- Updates `Button Icon` story
+- Updates all dependencies
+
 ## 0.2.0
 
 ### Minor Changes
