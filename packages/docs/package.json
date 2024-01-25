@@ -8,9 +8,10 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "serve": "serve storybook-static",
-    "lint": "eslint src/**/*.ts* --fix"
+    "lint": "biome check --apply src/**/*.ts*"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.5.3",
     "@heroicons/react": "^2.1.1",
     "@storybook/addon-a11y": "^7.6.10",
     "@storybook/addon-essentials": "^7.6.10",
@@ -26,7 +27,6 @@
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "@wolves-league-ui/eslint-config": "workspace:*",
     "@wolves-league-ui/react": "workspace:*",
     "@wolves-league-ui/ts-config": "workspace:*",
     "react": "^18.2.0",

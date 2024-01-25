@@ -8,10 +8,10 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "lint": "eslint src/**/*.ts* --fix"
+    "lint": "biome check --apply src/*.ts*"
   },
   "devDependencies": {
-    "@wolves-league-ui/eslint-config": "workspace:*",
+    "@biomejs/biome": "1.5.3",
     "@wolves-league-ui/ts-config": "workspace:*",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
