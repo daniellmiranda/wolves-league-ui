@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Tooltip } from '@wolves-league-ui/react';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@wolves-league-ui/react';
 
 const meta: Meta<typeof Tooltip> = {
   component: Tooltip,
@@ -9,22 +9,67 @@ const meta: Meta<typeof Tooltip> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-    children: { control: false, defaultValue: 'Tooltip Text' },
-    side: {
-      control: 'select',
-      options: ['top', 'right', 'bottom', 'left'],
-    },
-  },
 };
 
 export default meta;
-
 type Story = StoryObj<typeof Tooltip>;
 
-export const Default: Story = {
-  args: {
-    children: <InformationCircleIcon height="24" width="24" className="text-gray-100" />,
-    content: 'Tooltip content',
-  },
+export const Top: Story = {
+  render: () => (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Tooltip Text</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  ),
+};
+
+export const Right: Story = {
+  render: () => (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+        </TooltipTrigger>
+        <TooltipContent side="right">
+          <p>Tooltip Text</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  ),
+};
+
+export const Bottom: Story = {
+  render: () => (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+        </TooltipTrigger>
+        <TooltipContent side="bottom">
+          <p>Tooltip Text</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  ),
+};
+
+export const Left: Story = {
+  render: () => (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+        </TooltipTrigger>
+        <TooltipContent side="left">
+          <p>Tooltip Text</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  ),
 };
