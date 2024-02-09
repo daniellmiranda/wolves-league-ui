@@ -1,6 +1,6 @@
 import { Slot } from '@radix-ui/react-slot';
 import { ComponentPropsWithoutRef, forwardRef } from 'react';
-import { VariantProps, tv } from 'tailwind-variants';
+import { tv, VariantProps } from 'tailwind-variants';
 
 const button = tv({
   base: 'inline-flex gap-2 px-4 py-2 rounded-lg transition-all ease-in-out border border-transparent font-medium transform cursor-default active:scale-95 disabled:text-gray-400 disabled:border-dashed disabled:border-gray-400 disabled:bg-transparent disabled:cursor-not-allowed w-fit',

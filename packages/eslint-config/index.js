@@ -21,7 +21,8 @@ module.exports = {
   plugins: [
     'react',
     'jsx-a11y',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'simple-import-sort'
   ],
   rules: {
     'prettier/prettier': ["error", {
@@ -37,6 +38,7 @@ module.exports = {
     'react/prop-types': 'off',
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
+    "simple-import-sort/imports": "error"
   },
   settings: {
     react: {
