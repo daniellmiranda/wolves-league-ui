@@ -10,10 +10,14 @@ Dialog.Trigger = Trigger;
 export const Close = DialogPrimitive.Close;
 Dialog.Close = Close;
 
-export const Header = ({ ...props }) => <div {...props} className="flex flex-col" />;
+export const Header = ({ ...props }) => (
+  <div {...props} className="flex flex-col" />
+);
 Dialog.Header = Header;
 
-export const Footer = ({ ...props }) => <div {...props} className="flex justify-end gap-2" />;
+export const Footer = ({ ...props }) => (
+  <div {...props} className="flex justify-end gap-2" />
+);
 Dialog.Footer = Footer;
 
 export const Content = ({ ...props }: DialogPrimitive.DialogContentProps) => (
@@ -40,7 +44,9 @@ export const Title = ({ ...props }: DialogPrimitive.DialogTitleProps) => (
 Dialog.displayName = DialogPrimitive.Title.displayName;
 Dialog.Title = Title;
 
-export const Description = ({ ...props }: DialogPrimitive.DialogDescriptionProps) => (
+export const Description = ({
+  ...props
+}: DialogPrimitive.DialogDescriptionProps) => (
   <DialogPrimitive.Description {...props} className="text-sm text-gray-200" />
 );
 Dialog.displayName = DialogPrimitive.Description.displayName;

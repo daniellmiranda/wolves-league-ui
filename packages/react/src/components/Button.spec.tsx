@@ -7,7 +7,9 @@ import { Button } from '../components/Button';
 
 describe('Button', () => {
   test('should render the component', () => {
-    const { getByText } = render(<Button variant="secondary">Test Text</Button>);
+    const { getByText } = render(
+      <Button variant="secondary">Test Text</Button>,
+    );
     expect(getByText('Test Text')).toBeInTheDocument();
   });
 
