@@ -1,6 +1,11 @@
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@wolves-league-ui/react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@wolves-league-ui/react';
+import { InfoIcon } from 'lucide-react';
 
 const meta: Meta<typeof Tooltip> = {
   component: Tooltip,
@@ -19,7 +24,7 @@ export const Top: Story = {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+          <InfoIcon className="h-4 w-4 text-gray-100" />
         </TooltipTrigger>
         <TooltipContent>
           <p>Tooltip Text</p>
@@ -34,7 +39,7 @@ export const Right: Story = {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+          <InfoIcon className="h-4 w-4 text-gray-100" />
         </TooltipTrigger>
         <TooltipContent side="right">
           <p>Tooltip Text</p>
@@ -49,7 +54,7 @@ export const Bottom: Story = {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+          <InfoIcon className="h-4 w-4 text-gray-100" />
         </TooltipTrigger>
         <TooltipContent side="bottom">
           <p>Tooltip Text</p>
@@ -64,7 +69,7 @@ export const Left: Story = {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <InformationCircleIcon height="24" width="24" className="text-gray-100" />
+          <InfoIcon className="h-4 w-4 text-gray-100" />
         </TooltipTrigger>
         <TooltipContent side="left">
           <p>Tooltip Text</p>

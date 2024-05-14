@@ -4,5 +4,5 @@ import wlConfig from '@wolves-league/eslint-config';
 export default {
   ...wlConfig.configs.prettier,
   plugins: ['prettier-plugin-tailwindcss'],
-  "tailwindFunctions": ['cn'],
+  tailwindFunctions: ['cn'],
 };

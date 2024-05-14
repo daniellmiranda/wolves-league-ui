@@ -1,10 +1,11 @@
-import { Cog6ToothIcon } from '@heroicons/react/24/solid';
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 import { Button } from '@wolves-league-ui/react';
+import { CogIcon } from 'lucide-react';
 
 const meta: Meta<typeof Button> = {
-  component: Button,
   title: 'Form/Button',
+  component: Button,
   parameters: {
     layout: 'fullscreen',
   },
@@ -25,6 +26,7 @@ const meta: Meta<typeof Button> = {
     onClick: { table: { disable: true }, action: 'clicked' },
     asChild: { control: 'boolean' },
   },
+  args: { onClick: fn() },
   decorators: [
     (Story, context) => {
       const isStoryContext = context.viewMode === 'story';
@@ -47,7 +49,6 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
@@ -80,7 +81,7 @@ export const Highlight: Story = {
 
 export const Link: Story = {
   args: {
-    children: <a onClick={() => null}>Label</a>,
+    children: <a href="/">Label</a>,
     variant: 'link',
     asChild: true,
   },
@@ -95,7 +96,7 @@ export const TextWithIcon: Story = {
   args: {
     children: (
       <>
-        <Cog6ToothIcon width="24" height="24" /> Label
+        <CogIcon className="h-4 w-4" /> Label
       </>
     ),
   },
@@ -108,7 +109,7 @@ export const TextWithIcon: Story = {
 
 export const Icon: Story = {
   args: {
-    children: <Cog6ToothIcon width="24" height="24" />,
+    children: <CogIcon className="h-4 w-4" />,
     icon: true,
   },
   argTypes: {
