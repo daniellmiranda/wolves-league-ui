@@ -32,9 +32,6 @@ These are the packages present in the `packages` folder:
 - [TailwindCSS]('https://tailwindcss.com')
 - [Tailwind Variants]('https://www.tailwind-variants.org')
 - [Storybook]('https://storybook.js.org')
-- [Vitest]('https://vitest.dev')
-- [React Testing Library]('https://testing-library.com/docs/react-testing-library/intro')
-- [Happy Dom]('https://github.com/capricorn86/happy-dom')
 
 ## 🎨 Styles
 Since I am not a designer, the styles applied to the components are purely based on my personal preferences, which may not align with established design guidelines.

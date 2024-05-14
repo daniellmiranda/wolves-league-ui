@@ -8,9 +8,7 @@
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react,react-dom",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react,react-dom",
-    "lint": "eslint src/**/*.ts* --fix",
-    "test": "vitest run src",
-    "test:watch": "vitest src"
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
