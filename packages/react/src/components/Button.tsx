@@ -2,18 +2,27 @@ import { Slot } from '@radix-ui/react-slot';
 import { ComponentPropsWithoutRef, forwardRef } from 'react';
 import { tv, VariantProps } from 'tailwind-variants';
 
+import { cn } from '../lib/utils';
+
 const button = tv({
-  base: 'inline-flex gap-2 px-4 py-2 rounded-lg transition-all ease-in-out border border-transparent font-medium transform cursor-default active:scale-95 disabled:text-gray-400 disabled:border-dashed disabled:border-gray-400 disabled:bg-transparent disabled:cursor-not-allowed w-fit',
+  base: cn(
+    'inline-flex w-fit transform cursor-default gap-2 rounded-lg border border-transparent px-4 py-2 font-medium transition-all ease-in-out active:scale-95 disabled:cursor-not-allowed disabled:border-dashed disabled:border-gray-400 disabled:bg-transparent disabled:text-gray-400',
+  ),
   variants: {
     variant: {
-      primary:
-        'bg-gray-900 text-gray-100 border border-gray-600  hover:bg-gray-600',
-      secondary:
+      primary: cn(
+        'border border-gray-600 bg-gray-900  text-gray-100 hover:bg-gray-600',
+      ),
+      secondary: cn(
         'border-gray-100 text-gray-100 hover:bg-gray-100 hover:text-gray-900',
-      tertiary: 'text-gray-100 hover:text-gray-400',
-      highlight:
-        'bg-wl-700 text-white border border-wl-400 hover:bg-wl-900 hover:border-wl-900',
-      link: 'underline-offset-4 cursor-pointer text-gray-100 hover:underline p-1',
+      ),
+      tertiary: cn('text-gray-100 hover:text-gray-400'),
+      highlight: cn(
+        'bg-wl-700 border-wl-400 hover:bg-wl-900 hover:border-wl-900 border text-white',
+      ),
+      link: cn(
+        'cursor-pointer p-1 text-gray-100 underline-offset-4 hover:underline',
+      ),
     },
     size: {
       sm: 'text-sm',
@@ -21,7 +30,7 @@ const button = tv({
       lg: 'text-lg',
     },
     full: {
-      true: 'w-full justify-center',
+      true: cn('w-full justify-center'),
     },
     icon: {
       true: 'text-white',

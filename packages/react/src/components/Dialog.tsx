@@ -25,11 +25,11 @@ export const Content = ({ ...props }: DialogPrimitive.DialogContentProps) => (
     <DialogPrimitive.Overlay>
       <DialogPrimitive.Content
         {...props}
-        className="flex flex-col fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] bg-gray-900 text-gray-100 p-4 rounded-md border border-gray-700 text-sm gap-4 shadow-lg data-[state=open]:animate-contentShow"
+        className="data-[state=open]:animate-contentShow fixed left-[50%] top-[50%] flex max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] flex-col gap-4 rounded-md border border-gray-700 bg-gray-900 p-4 text-sm text-gray-100 shadow-lg"
       >
         {props.children}
-        <DialogPrimitive.Close className="absolute right-3 top-3 p-1 cursor-default">
-          <Cross2Icon className="hover:text-gray-200 transition-all ease-in-out" />
+        <DialogPrimitive.Close className="absolute right-3 top-3 cursor-default p-1">
+          <Cross2Icon className="transition-all ease-in-out hover:text-gray-200" />
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
     </DialogPrimitive.Overlay>
@@ -39,7 +39,7 @@ Dialog.displayName = DialogPrimitive.Content.displayName;
 Dialog.Content = Content;
 
 export const Title = ({ ...props }: DialogPrimitive.DialogTitleProps) => (
-  <DialogPrimitive.Title {...props} className="font-bold text-lg" />
+  <DialogPrimitive.Title {...props} className="text-lg font-bold" />
 );
 Dialog.displayName = DialogPrimitive.Title.displayName;
 Dialog.Title = Title;
